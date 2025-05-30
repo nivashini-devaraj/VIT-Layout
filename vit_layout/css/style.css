@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:sans-serif;
+    background-color:#2E4053;
+}
+h4{
+    white-space: normal;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    color: black;
+    padding: 1rem;
+    height: 130px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+.logo>img{
+    height:50px;
+    width: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ddd;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #ece9e9;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 1rem;
+}
+.logo{
+    flex-direction: column;
+}
+
+.nav-links li {
+    margin: 0.5rem 0;
+}
+
+#menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+}
+
+.hamburger {
+    display: block;
+}
+}
+/*For boreder under showing current page*/
+#currentpage{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #16B653;
+}
+.emptycontainer{
+    height:50px;
+    background-color: #000000;
+}
+.bluetext{
+    color: #2E4053; 
+}
+.greentext{
+    color:#16B653;
+}
+.whitetext{
+    color: #FFFFFF;
+}
+.homecontainer{
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+/*To show items in a row*/
+.flexrow{
+    display: flex;
+}
+/*To show items in a column*/
+.flexcolumn{
+    display: flex;
+    flex-direction: column;
+}
+/*Flex item align center*/
+.flexcenter{         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h4,h5{
+    line-height: 1.6;
+}
+/*container height*/
+.containerheight{
+    height:130px;
+}
+.containerheight>h4{
+    font-weight: bold;
+}
+.homecontainerimg{
+    width:30em;
+}
+/* Responsive home container*/
+    @media (max-width: 768px) {
+    .homecontainer{
+        flex-direction: column;
+        height:fit-content;
+    }
+    .containerheight{
+        height: fit-content;
+    }
+}
+    @media(min-width:768px) and (max-width: 1024px) {
+    .homecontainer{
+        height:fit-content;
+    }
+    .containerheight{
+        height: fit-content;
+    }
+        .homecontainerimg{
+    width:20em;
+}
+}
+
+/*Making text responsive*/
+   @media (max-width: 768px) {
+   h4 {
+  word-wrap: break-word;
+}
+
+}
+    @media(min-width:768px) and (max-width: 1024px) {
+  h4 {
+  word-wrap: break-word;
+}
+
+}
+
+/*To give space between each division or container*/
+.spacercontainer{
+height:8em;
+}
+@media (max-width: 768px) {
+    .spacercontainer{
+    height:4em;
+    }
+        
+}
+.icon{
+height:3em;
+width:3em;
+background-color:#16B653;
+border-radius: 50%;
+padding: 8px;
+}
+
+/*styling for anchor tag in define us section*/
+.astyle{
+text-decoration: none;
+color: black;
+font-weight: bold;
+}
+/*Grid container for Our services section  and pricing section*/
+.gridcontainer{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+}
+/* to set gradient for pricing */
+.gradient{
+background-image:linear-gradient(to bottom, #FFFFFF, #16B653);
+}
+/*To set custom icon for list*/
+.liststyle>li{
+list-style-image: url(../images/SVG\ k.png);    
+padding-top: 1rem;
+border-bottom: 1px solid lightgray;
+}
+
+
+@media (max-width: 768px) {
+.gridcontainer{
+    grid-template-columns: 1fr;
+}
+}
+@media(min-width:768px) and (max-width: 1024px) {
+.gridcontainer{
+    grid-template-columns: 1fr;
+}
+}
+.borderbottom{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #036d2c;
+}
+/*Card style for why hire us section*/
+.cardstyle{
+    background-color: #16B653;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: fit-content;
+    text-align: center;
+    height: 150px;
+    width:200px;
+}
+/*Style for quote section*/
+.quotecontainer{  
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+}
+/*Styling portfolio images */
+.portfolioimage{
+    height: 18rem;
+    width: 20rem;
+    border-radius: 10px;
+    margin-left: 2em;
+    margin-top: 4em;
+}
+.reviewback{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 15fr 0.3fr 0.3fr;
+}
+.vertical-line-black {
+    width: 2px;               /* Line thickness */
+    height: 200px;            /* Line height */
+    background-color: #000000;   /* Line color */
+}
+.vertical-line-green {
+    width: 2px;               /* Line thickness */
+    height: 350px;            /* Line height */
+    background-color: #16B653;   /* Line color */
+}
+/*for arrow image in review section*/
+.reviewarrow{
+    height: 2rem;
+    width: 3rem;
+}
+footer{
+    border-top: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+.footerborder{
+     border-top: 2px solid #16B653;
+}
+.footerlogo{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.footergrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+ @media (max-width: 768px) {
+    .footergrid{
+        grid-template-columns: 1fr;}
+}
+.footerlink{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.verticalline {
+    width: 2px;               /* Line thickness */
+    height: 700px;            /* Line height */
+    background-color: #16B653;   /* Line color */
+}
+/*Grid Layout to display the vertical line in all pages*/
+.gridforline{
+    display: grid;
+    grid-template-columns: 0.3fr 15fr;
+}
+
+/*Section above define us company's features*/
+ .featuresgrid{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1.5fr;
+        position: relative;
+    }
+     .floatingform{
+        position: absolute;
+        bottom: 15px;
+        right:0;
+        background: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+    .featuresgrid{
+        grid-template-columns: 1fr;
+        position:static;
+    }
+    .floatingform{
+        position: static;
+    }
+    }
+    @media(min-width:768px) and (max-width: 1024px) {
+        .featuresgrid{
+        grid-template-columns: 1fr;
+        position:static;
+        }
+        .floatingform{
+            position: static;
+        }
+    }
+
+    /*Styles used for contact form*/
+     .contactcontainer{
+            background-color: #FFFFFF;
+        }
+        .contact_grid{
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+        }
+        .horizontal_line{
+            width:300px;
+            background-color: #2E4053;
+            height:10px;
+        }
+        .color{
+            color: #2E4053;
+        }
+        @media (max-width: 768px) {
+        .contact_grid{
+            grid-template-columns: 1fr;
+        }
+        }
+        .bgcolor{
+            background-color: #2E4053;
+            color: #FFFFFF;
+            height: fit-content;
+        }
+        .btn-close{
+            background: url(../images/material-symbols_cancel.png);
+            opacity: 1;
+        }
+        .modal-header{
+            border:none;
+        }
